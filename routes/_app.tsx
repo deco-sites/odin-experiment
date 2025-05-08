@@ -8,6 +8,7 @@ export default defineApp(async (_req, ctx) => {
     <>
       {/* Include default fonts and css vars */}
       <Theme colorScheme="any" />
+      <link rel="stylesheet" href={asset("/odin-style.css")} />
 
       {/* Include Icons and manifest */}
       <Head>
@@ -18,8 +19,6 @@ export default defineApp(async (_req, ctx) => {
             __html: `@view-transition { navigation: auto; }`,
           }}
         />
-
-        <link rel="stylesheet" href={asset("../styles.css")} />
 
         {/* Tailwind v3 CSS file */}
         <link

@@ -1,5 +1,6 @@
 {
   "imports": {
+    "app-template/": "/home/alan.artigas/deco-odin-library/app-template/",
     "$fresh/": "https://deno.land/x/fresh@1.7.3/",
     "@cliffy/prompt": "jsr:@cliffy/prompt@^1.0.0-rc.5",
     "@core/asyncutil": "jsr:@core/asyncutil@^1.0.2",
@@ -25,7 +26,8 @@
     "@std/streams": "jsr:@std/streams@^1.0.0",
     "@std/testing": "jsr:@std/testing@^1.0.0",
     "@zaubrik/djwt": "jsr:@zaubrik/djwt@^3.0.2",
-    "@stone-payments/odin-legacy-stone": "npm:@stone-payments/odin-legacy-stone@1.0.0-beta.15",
+    "@stone-payments/odin-legacy-stone": "npm:@stone-payments/odin-legacy-stone@1.0.0-beta.23",
+    "@stone-payments/odin-icons": "npm:@stone-payments/odin-icons@0.0.4-beta.0",
     "fast-json-patch": "npm:fast-json-patch@^3.1.1",
     "partytown/": "https://deno.land/x/partytown@0.4.8/",
     "preact": "npm:preact@10.23.1",
@@ -48,8 +50,7 @@
     "@deco/dev": "jsr:@deco/dev@1.113.0"
   },
   "tasks": {
-    "copy:css": "deno run -A scripts/copy_css.ts",
-    "start": "deno task copy:css deno && deno run -A --unstable-http --env https://deco.cx/run -- deno task dev",
+    "start": "deno run -A --unstable-http --env https://deco.cx/run -- deno task dev",
     "gen": "deno run -A dev.ts --gen-only",
     "play": "USE_LOCAL_STORAGE_ONLY=true deno task start",
     "component": "deno eval 'import \"deco/scripts/component.ts\"'",

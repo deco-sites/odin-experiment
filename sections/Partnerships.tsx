@@ -1,35 +1,24 @@
 import { Partnerships as PartinershipsOdin } from "@stone-payments/odin-legacy-stone/preact";
 
+interface ImageProps {
+  alternativeText: string;
+  width: number;
+  height: number;
+  path: string;
+}
 export interface Partners {
-  mobile: {
-    alternativeText: string;
-    width: number;
-    height: number;
-    path: string;
-  };
-  tablet: {
-    alternativeText: string;
-    width: number;
-    height: number;
-    path: string;
-  };
-  web: {
-    alternativeText: string;
-    width: number;
-    height: number;
-    path: string;
-  };
+  mobile: ImageProps;
+  tablet: ImageProps;
+  web: ImageProps;
 }
 
 export interface Props {
-  id?: string;
   referId?: string;
   bg?: string;
   partners: Partners[];
 }
 
 export default function Partnerships({
-  id = "",
   referId = "",
   bg = "bg-white",
   partners = [
@@ -155,7 +144,5 @@ export default function Partnerships({
     },
   ],
 }: Props) {
-  return (
-    <PartinershipsOdin id={id} referId={referId} partners={partners} bg={bg} />
-  );
+  return <PartinershipsOdin referId={referId} partners={partners} bg={bg} />;
 }

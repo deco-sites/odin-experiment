@@ -10,12 +10,14 @@ export interface Stamps {
 
 export interface Props {
   title: string;
+  titleColor?: string;
   stamps: Stamps[];
   className: string;
 }
 
 export default function Partnerships({
   title = " Eleita pelos clientes como a melhor experiência do mercado",
+  titleColor,
   stamps = [
     {
       id: 1,
@@ -42,6 +44,11 @@ export default function Partnerships({
   className = "flex justify-center items-center py-40 lg:py-80 px-24 2xl:px-0 w-full",
 }: Props) {
   return (
-    <BestExperienceOdin stamps={stamps} title={title} className={className} />
+    <BestExperienceOdin
+      stamps={stamps}
+      title={title}
+      className={className}
+      titleColor={titleColor}
+    />
   );
 }
