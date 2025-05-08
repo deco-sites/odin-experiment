@@ -1,0 +1,37 @@
+{
+  "__resolveType": "site/sections/SimpleCard.tsx",
+  "iconDescriptions": [
+    {
+      "iconName": {
+        "IconsNames": {
+          "0": "p",
+          "1": "i",
+          "2": "x"
+        },
+        "id": "ArrowLeft"
+      },
+      "description": "Agora vai"
+    },
+    {
+      "iconName": {
+        "IconsNames": {},
+        "id": "ArrowLeft"
+      }
+    }
+  ],
+  "buttons": [
+    {
+      "color": "primary",
+      "linkTarget": "_blank",
+      "iconPosition": "left",
+      "uiStyleVariant": "link",
+      "type": "button"
+    }
+  ],
+  "variant": "grid",
+  "iconTest": {
+    "iconsNames": {},
+    "icons": "pix"
+  },
+  "icon": {}
+}

@@ -1,1 +1,57 @@
-{"name":"My New Page","path":"/example-path","sections":[{"__resolveType":"site/sections/Hero.tsx"},{"__resolveType":"site/sections/SimpleTextList.tsx"}],"__resolveType":"website/pages/Page.tsx"}
+{
+  "name": "Teste",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "app-template/sections/BestExperience.tsx",
+        "title": "Eleita pelos clientes como a melhor experiência do mercado",
+        "stamps": [
+          {
+            "image": {
+              "path": "/site-stone/stamps/premio-ibest",
+              "alternativeText": "Premio ibest"
+            },
+            "id": 1
+          },
+          {
+            "image": {
+              "path": "/site-stone/stamps/RA-1000",
+              "alternativeText": "RA 1000"
+            },
+            "id": 2
+          },
+          {
+            "image": {
+              "path": "/site-stone/stamps/premio-whow",
+              "alternativeText": "Premio Whow"
+            },
+            "id": 3
+          }
+        ],
+        "className": "flex justify-center items-center py-40 lg:py-80 px-24 2xl:px-0 w-full"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "app-template/sections/SimpleCard.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "app-template/sections/DefaultHero.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "app-template/sections/RTB.tsx",
+        "description": "Receba pagamentos recorrentes por cartão de crédito, débito Pinless e boleto. Crie e gerencie suas assinaturas de forma simples e eficiente."
+      }
+    }
+  ],
+  "__resolveType": "website/pages/Page.tsx",
+  "path": "/exemple"
+}
