@@ -1,6 +1,5 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
-import { ScrollingBar, Hero } from '@stone-payments/odin-legacy-stone/preact'
 
 export interface CTA {
   id?: string;
@@ -41,57 +40,61 @@ export default function HeroFlats({
   ],
 }: Props) {
   return (
-    <div class="lg:container lg:mx-auto mx-4">
-      <ScrollingBar phraseRepeats={50}  className="bg-stone-200">
-      <div className="flex gap-8 justify-center items-center">
-      <h6 className="font-display text-xl leading-5 text-display-900">
-        Débito a partir de 0,79% l Crédito a partir de 2,99%
-      </h6>
-    </div>
-    <div className="flex content-center items-center py-6 px-16 my-8 mr-8 ml-24 bg-stone-900 rounded-2xl">
-      <p className="font-display text-xl font-bold text-white">
-        🔥 Oferta exclusiva!
-      </p>
-    </div>
-      </ScrollingBar>
-  <div>
-  <Hero
-  background=""
-       heading= {
-       {
-        title: "Título Principal do Hero",
-       }
-      }
-      description= {
-       { text: "Descrição persuasiva destacando os principais benefícios e propostas de valor.",}
-      }
-      buttons= {
-        [
-          {
-            label: "Call to Action",
-            variant: "primary",
-            onClick: () => console.log("CTA clicked"),
-          },
-        ]
-      }
-      images= {
-        {
-          web: {
-            path: "https://res.cloudinary.com/dunz5zfpt/image/upload/v1743082095/stone-cms/prod/hero_maquina_de_cartao_mobile_5c2f82e30d.png",
-            alternativeText: "Imagem ilustrativa do desktop",
-          },
-          mobile: {
-            path: "https://res.cloudinary.com/dunz5zfpt/image/upload/v1741821577/stone-cms/prod/green_angels_stone_b111026c17.png",
-            alternativeText: "Imagem ilustrativa mobile",
-          },
-          tablet: {
-            path: "https://res.cloudinary.com/dunz5zfpt/image/upload/v1741821577/stone-cms/prod/green_angels_stone_b111026c17.png",
-            alternativeText: "Imagem ilustrativa mobile",
-          },
-        }
-      }
-      />
-  </div>
-    </div>
+    <nav class="lg:container lg:mx-auto mx-4">
+      <div class="flex flex-col items-center gap-8">
+        <div
+          class={`flex w-full xl:container xl:mx-auto py-20 mx-5 md:mx-10 z-10 ${
+            image
+              ? PLACEMENT[placement]
+              : "flex-col items-center justify-center text-center"
+          } lg:py-36 gap-12 md:gap-20 items-center`}
+        >
+          {image && (
+            <Image
+              width={640}
+              class="w-full lg:w-1/2 object-fit"
+              sizes="(max-width: 640px) 100vw, 30vw"
+              src={image}
+              alt={image}
+              decoding="async"
+              loading="lazy"
+            />
+          )}
+          <div
+            class={`mx-6 lg:mx-auto lg:w-full space-y-4 gap-4 ${
+              image
+                ? "lg:w-1/2 lg:max-w-xl"
+                : "flex flex-col items-center justify-center lg:max-w-3xl"
+            }`}
+          >
+            <div
+              class="inline-block lg:text-[80px] text-4xl leading-none font-medium"
+              dangerouslySetInnerHTML={{
+                __html: title,
+              }}
+            >
+            </div>
+            <p class="text-lg md:text-md leading-[150%]">
+              {description}
+            </p>
+            <div class="flex items-center gap-3">
+              {cta?.map((item) => (
+                <a
+                  key={item?.id}
+                  id={item?.id}
+                  href={item?.href}
+                  target={item?.href.includes("http") ? "_blank" : "_self"}
+                  class={`font-normal btn btn-primary ${
+                    item.outline && "btn-outline"
+                  }`}
+                >
+                  {item?.text}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 }
