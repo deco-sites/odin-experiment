@@ -2,21 +2,15 @@ import { asset, Head } from "$fresh/runtime.ts";
 import { defineApp } from "$fresh/server.ts";
 import Theme from "../sections/Theme/Theme.tsx";
 import { Context } from "@deco/deco";
-
 export default defineApp(async (_req, ctx) => {
     const revision = await Context.active().release?.revision();
-
     return (<>
       {/* Include default fonts and css vars */}
       <Theme colorScheme="any"/>
-      <link
-    rel="stylesheet"
-    href={asset("/odin-style.css")}
-  />
+
       {/* Include Icons and manifest */}
       <Head>
         {/* Enable View Transitions API */}
-       
         <style dangerouslySetInnerHTML={{
             __html: `@view-transition { navigation: auto; }`,
         }}/>
