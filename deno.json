@@ -1,5 +1,6 @@
 {
   "imports": {
+    "@deco/deno-ast-wasm": "jsr:@deco/deno-ast-wasm@^0.5.5",
     "app-template/": "/home/alan.artigas/deco-odin-library/app-template/",
     "$fresh/": "https://deno.land/x/fresh@1.7.3/",
     "@cliffy/prompt": "jsr:@cliffy/prompt@^1.0.0-rc.5",
@@ -26,7 +27,7 @@
     "@std/streams": "jsr:@std/streams@^1.0.0",
     "@std/testing": "jsr:@std/testing@^1.0.0",
     "@zaubrik/djwt": "jsr:@zaubrik/djwt@^3.0.2",
-    "@stone-payments/odin-legacy-stone": "npm:@stone-payments/odin-legacy-stone@1.0.0-beta.23",
+    "@stone-payments/odin-legacy-stone": "npm:@stone-payments/odin-legacy-stone@1.0.0-beta.32",
     "@stone-payments/odin-icons": "npm:@stone-payments/odin-icons@0.0.4-beta.0",
     "fast-json-patch": "npm:fast-json-patch@^3.1.1",
     "partytown/": "https://deno.land/x/partytown@0.4.8/",
@@ -36,7 +37,6 @@
     "tailwind-merge": "https://esm.sh/v135/tailwind-merge@2.3.0",
     "react": "npm:preact/compat",
     "react-dom/client": "npm:preact/compat",
-    "react-dom": "npm:preact/compat",
     "simple-git": "npm:simple-git@^3.25.0",
     "std/": "https://deno.land/std@0.190.0/",
     "site/": "./",

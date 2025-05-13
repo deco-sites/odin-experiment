@@ -7,7 +7,6 @@ import {
   Partnerships,
   SimpleCard,
 } from "@stone-payments/odin-legacy-stone/preact";
-import DefaultRTBsO from "site/islands/DefaultRTBs.tsx";
 import Features from "app-template/sections/Features.tsx";
 
 export interface CTA {
@@ -30,6 +29,16 @@ export interface Props {
   image?: ImageWidget;
   placement?: "left" | "right";
   cta?: CTA[];
+
+  /**
+   * @format icon-select
+   * @options site/loaders/icons.ts
+   */
+  icon: string;
+  /**
+   * @default Um teste.
+   */
+  textLabel?: string;
 }
 
 const PLACEMENT = {
@@ -204,9 +213,13 @@ export default function HeroFlats({
     { id: "change-me-1", href: "/", text: "Change me", outline: false },
     { id: "change-me-2", href: "/", text: "Change me", outline: true },
   ],
+  textLabel = "Um teste",
 }: Props) {
   return (
     <>
+      <div className="hidden text-[48px] max-w-72 h-[64px]" />
+      <div className="lg:max-w-[210px] w-[40px] h-[40px] rounded-[8px]" />
+      <div className="lg:h-[880px] h-[48px] md:min-h-[648px] flex absolute top-[260px] sm:top-[220px] md:top-[180px] lg:top-[205px] flex-col gap-24 justify-center items-center py-16 pl-24 w-full overflow-x-auto xl:justify-center pr-24" />
       <Hero
         background=""
         heading={{
@@ -287,39 +300,6 @@ export default function HeroFlats({
                     title={bestExperience.title}
                     stamps={bestExperience.stamps}
                   />
-
-                  <DefaultRTBsO
-                    referId="234"
-                    title="Vamos testar os icones"
-                    cards={[
-                      {
-                        icon: "coin",
-                        href: String("https://www.stone.com.br/"),
-                        title: "Tentando fazer funcionar 1",
-                        description: "Pode haver problemas com os icones ",
-                      },
-                      {
-                        icon: "boleto",
-                        href: String("https://www.stone.com.br/"),
-                        title: "Tentando fazer funcionar 2",
-                        description: "Pode haver problemas com os icones ",
-                      },
-                      {
-                        icon: "boleto",
-                        href: String("https://www.stone.com.br/"),
-                        title: "Tentando fazer funcionar 3",
-                        description: "Pode haver problemas com os icones ",
-                      },
-                      {
-                        icon: "boleto",
-                        href: String("https://www.stone.com.br/"),
-                        title: "Tentando fazer funcionar 4",
-                        description: "Pode haver problemas com os icones ",
-                      },
-                    ]}
-                  />
-
-                  {/* <RTBIsland /> */}
 
                   <SimpleCard
                     buttons={[{ label: "Teste" }]}
@@ -412,6 +392,7 @@ export default function HeroFlats({
                       item.outline && "btn-outline"
                     }`}
                   >
+                    {textLabel}
                     {item?.text}
                   </a>
                 ))}

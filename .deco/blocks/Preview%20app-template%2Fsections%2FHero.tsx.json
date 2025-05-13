@@ -1,0 +1,24 @@
+{
+  "__resolveType": "app-template/sections/Hero.tsx",
+  "heading": {
+    "title": "Plataforma de pagamento online completa"
+  },
+  "description": {
+    "text": "Impulsione suas conversões com o Pagar.me: a plataforma de pagamento que reúne tudo o que você precisa para vender online com alta performance."
+  },
+  "buttons": [],
+  "images": {
+    "mobile": {
+      "alternativeText": "Imagem de um empreendedor fazendo a gestão com a Stone ao lado uma maquininha e um celular com o app Stone",
+      "path": "https://res.cloudinary.com/dunz5zfpt/image/upload/stone-cms/prod/capital_de_giro_stone_banner_header_web_ce72e787fd*"
+    },
+    "tablet": {
+      "alternativeText": "Imagem de um empreendedor fazendo a gestão com a Stone ao lado uma maquininha e um celular com o app Stone",
+      "path": "https://res.cloudinary.com/dunz5zfpt/image/upload/stone-cms/prod/capital_de_giro_stone_banner_header_web_ce72e787fd*"
+    },
+    "web": {
+      "alternativeText": "Imagem de um empreendedor fazendo a gestão com a Stone ao lado uma maquininha e um celular com o app Stone",
+      "path": "https://res.cloudinary.com/dunz5zfpt/image/upload/stone-cms/prod/capital_de_giro_stone_banner_header_web_ce72e787fd*"
+    }
+  }
+}
