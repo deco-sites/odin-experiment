@@ -1,42 +1,504 @@
 {
-    "name": "Home",
-    "path": "/",
-    "sections": [
-      {
-        "__resolveType": "Header"
-      },
-      {
-        "__resolveType": "site/sections/Hero.tsx",
-        "title": "<p>Click here to tweak this text however you want.</p>",
-        "cta": [],
-        "description": "This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away."
-      },
-      {
-        "__resolveType": "site/sections/Logos.tsx"
-      },
-      {
-        "__resolveType": "site/sections/ImageWithParagraph.tsx"
-      },
-      {
-        "__resolveType": "site/sections/ImageWithParagraph.tsx",
-        "placement": "right"
-      },
-      {
-        "__resolveType": "site/sections/BlogPosts.tsx"
-      },
-      {
-        "__resolveType": "site/sections/Testimonials.tsx",
-        "arrows": true
-      },
-      {
-        "__resolveType": "site/sections/Faq.tsx"
-      },
-      {
-        "__resolveType": "Footer"
+  "name": "Home",
+  "path": "/",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "app-template/sections/Header.tsx"
       }
-    ],
-    "__resolveType": "website/pages/Page.tsx",
-    "seo": {
-      "__resolveType": "website/sections/Seo/SeoV2.tsx"
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "app-template/sections/Hero.tsx",
+        "heading": {
+          "title": "Plataforma de pagamento online completa"
+        },
+        "description": {
+          "text": "Impulsione suas conversões com o Pagar.me: a plataforma de pagamento que reúne tudo o que você precisa para vender online com alta performance."
+        },
+        "buttons": [
+          {
+            "color": "primary",
+            "linkTarget": "_blank",
+            "iconPosition": "left",
+            "uiStyleVariant": "button",
+            "type": "button",
+            "label": "Venda com o Pagar.me",
+            "link": {},
+            "linkPathname": "https://www.stone.com.br/"
+          }
+        ],
+        "images": {
+          "mobile": {
+            "alternativeText": "Imagem ilustrativa do desktop",
+            "path": "https://res.cloudinary.com/dunz5zfpt/image/upload/v1741821577/stone-cms/prod/green_angels_stone_b111026c17.png"
+          },
+          "web": {
+            "alternativeText": "Imagem ilustrativa do desktop",
+            "path": "https://assets.decocache.com/odin-experiment/14f54c92-bc3f-41e3-aed4-ac77eccbd88b/Hero.png"
+          },
+          "tablet": {
+            "path": "https://res.cloudinary.com/dunz5zfpt/image/upload/v1741821577/stone-cms/prod/green_angels_stone_b111026c17.png",
+            "alternativeText": "Imagem ilustrativa mobile"
+          }
+        },
+        "background": "bg-display-50"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "app-template/sections/Features.tsx",
+        "backgroundColor": "bg-display-50",
+        "cards": [
+          {
+            "icon": "smartPhone",
+            "title": "Venda online",
+            "description": "No cartão, Pix, boleto e carteiras digitais",
+            "classNameDescription": "lg:max-w-[210px]"
+          },
+          {
+            "icon": "thumbsUp",
+            "title": "Checkout seguro",
+            "description": "Ofereça a melhor experiência de compra",
+            "classNameDescription": "lg:max-w-[210px]"
+          },
+          {
+            "icon": "securityShield",
+            "title": "Proteção antifraude",
+            "description": "Mais segurança para suas vendas",
+            "classNameDescription": "lg:max-w-[210px]"
+          },
+          {
+            "icon": "moneyStack",
+            "title": "Split de Pagamento",
+            "description": "Automatize a divisão de recebíveis",
+            "classNameDescription": "lg:max-w-[210px]"
+          }
+        ],
+        "titleColor": "text-black"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "app-template/sections/SimpleCard.tsx",
+        "image": {
+          "path": "/stone-cms/prod/card_web_6a71e30d3f",
+          "alternativeText": "Cartão Visa Stone",
+          "previewUrl": "/stone-cms/prod/link_de_pagamento_adapta_sua_necessidade_de_venda_1de160021c",
+          "provider": "/stone-cms/prod/card_web_6a71e30d3f"
+        },
+        "tag": " ",
+        "buttons": [
+          {
+            "color": "primary",
+            "linkTarget": "_blank",
+            "iconPosition": "left",
+            "uiStyleVariant": "link",
+            "type": "button",
+            "label": "Cadastre-se"
+          }
+        ],
+        "referId": "1",
+        "title": "Meios de pagamento diversificados",
+        "description": "Venda mais aceitando as formas de pagamento mais utilizadas: cartão de crédito, Pix, boleto e carteiras digitais.",
+        "reverse": true,
+        "iconDescriptions": [
+          {
+            "iconName": "moneyInsert",
+            "description": "Repasse de juros flexível",
+            "text": "Ofereça parcelamento em até 12x e repasse os juros de forma integral ou parcial ao cliente.",
+            "classNameDescription": "font-bold text-xl"
+          },
+          {
+            "iconName": "invoice",
+            "description": "Boleto sem custo de emissão",
+            "text": "Pague somente pelos boletos liquidados.",
+            "classNameDescription": "font-bold text-xl"
+          },
+          {
+            "iconName": "moneyBill",
+            "description": "Pix automatizado",
+            "classNameDescription": "font-bold text-xl",
+            "text": "Geramos um QR Code dinâmico para cada transação, facilitando a conciliação."
+          },
+          {
+            "iconName": "googlePlay",
+            "description": "Google Pay e Click to Pay da Visa",
+            "classNameDescription": "font-bold text-xl",
+            "text": "Agilize o processo de compra com opções de pagamento por carteiras digitais."
+          }
+        ],
+        "variant": "icon-description-text"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "app-template/sections/SimpleCard.tsx",
+        "reverse": false,
+        "referId": "2",
+        "tag": " ",
+        "title": "Venda nas redes sociais com o Link de Pagamento",
+        "description": "Simplifique compras por Instagram, WhatsApp e outras redes sociais, enviando um checkout seguro e personalizado para seu cliente pagar no cartão, Pix, boleto ou carteiras digitais.",
+        "iconDescriptions": [
+          {
+            "iconName": "check",
+            "description": "Crie pedidos e ofertas customizadas"
+          },
+          {
+            "iconName": "check",
+            "description": "Venda sem site ou maquininha de cartão"
+          },
+          {
+            "iconName": "check",
+            "description": "Recupere carrinhos abandonados"
+          },
+          {
+            "iconName": "check",
+            "description": "Acompanhe suas vendas em tempo real"
+          }
+        ],
+        "buttons": [
+          {
+            "color": "primary",
+            "linkTarget": "_blank",
+            "iconPosition": "left",
+            "uiStyleVariant": "link",
+            "type": "button",
+            "label": "Comece a vender"
+          }
+        ],
+        "image": {
+          "alternativeText": "Imagem de venda com link de pagamento Stone",
+          "path": "https://assets.decocache.com/odin-experiment/b840d999-c0aa-41af-b9e6-d7ac99abc01d/link-de-pagamento-no-celular.png"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "app-template/sections/SimpleCard.tsx",
+        "title": "Automatize repasses com o Split de Pagamento",
+        "description": "Facilite a divisão de pagamentos e repasse valores automaticamente entre diferentes recebedores. Mais agilidade e segurança para marketplaces, franquias e apps de delivery.",
+        "buttons": [
+          {
+            "color": "primary",
+            "linkTarget": "_blank",
+            "iconPosition": "left",
+            "uiStyleVariant": "link",
+            "type": "button",
+            "label": "Automatize seus pagamentos"
+          }
+        ],
+        "image": {
+          "path": "https://assets.decocache.com/odin-experiment/3e648d75-6a15-4278-b491-e6b6e13ac71a/automatize.png",
+          "alternativeText": "Uma ilustração de automatização"
+        },
+        "reverse": true,
+        "referId": "3",
+        "tag": " ",
+        "iconDescriptions": [
+          {
+            "iconName": "circleCheck",
+            "description": "Compliance com o Banco Central",
+            "text": "Atue em conformidade com as regulações, sem precisar fazer a divisão de recebíveis por conta própria.",
+            "classNameDescription": "font-bold text-xl"
+          },
+          {
+            "iconName": "moneyInsert",
+            "description": "Repasses automáticos e sem erros",
+            "text": "Repassamos os valores em tempo real para cada recebedor, com agendas de recebíveis individuais.",
+            "classNameDescription": "font-bold text-xl"
+          },
+          {
+            "iconName": "toolSettings",
+            "description": "Flexibilidade para o seu negócio",
+            "text": "Crie regras personalizadas para dividir os pagamentos. Defina quem arca com chargebacks e faça estornos parciais ou totais.",
+            "classNameDescription": "font-bold text-xl"
+          }
+        ],
+        "variant": "icon-description-text"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "app-template/sections/RTB.tsx",
+        "title": "Solução completa e flexível de recorrência",
+        "description": "Receba pagamentos recorrentes por cartão de crédito, débito Pinless e boleto. Crie e gerencie suas assinaturas de forma simples e eficiente.",
+        "buttons": [
+          {
+            "color": "primary",
+            "linkTarget": "_blank",
+            "iconPosition": "left",
+            "uiStyleVariant": "button",
+            "type": "button",
+            "label": "Aproveite já",
+            "iconName": "accelerator"
+          }
+        ],
+        "image": {
+          "path": "/stone-cms/prod/rtb_machine_11fde68437",
+          "alternativeText": "Maquininhas Stone"
+        },
+        "id": 1,
+        "features": [
+          {
+            "icon": "rotate360",
+            "title": "Retentativas",
+            "description": "Se um pagamento falhar, realizamos várias tentativas antes de suspender a assinatura.",
+            "id": 1
+          },
+          {
+            "icon": "email",
+            "title": "Avisos inteligentes",
+            "id": 2,
+            "description": "Envie notificações automáticas sobre status e pagamento da assinatura por e-mail."
+          },
+          {
+            "icon": "toolSettings",
+            "title": "Planos personalizados",
+            "description": "Crie assinaturas sob medida, com matrículas, descontos e itens temporários.",
+            "id": 3
+          },
+          {
+            "icon": "moneyStack",
+            "title": "Recorrência com Split",
+            "description": "Divida automaticamente os valores das assinaturas entre diferentes recebedores.",
+            "id": 4
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "app-template/sections/SimpleCard.tsx",
+        "referId": "4",
+        "tag": " ",
+        "description": "Conte com um sistema antifraude integrado que analisa automaticamente cada transação e bloqueia compras suspeitas.",
+        "title": "Proteção antifraude para suas vendas",
+        "reverse": true,
+        "iconDescriptions": [
+          {
+            "iconName": "database",
+            "description": "Inteligência de dados",
+            "text": "Nosso sistema é segmentado por nicho de mercado e aprende com seu histórico para tornar as análises cada vez mais precisas.",
+            "classNameDescription": "font-bold text-xl"
+          },
+          {
+            "iconName": "transaction",
+            "description": "Score Pagar.me",
+            "text": "Visualize o grau de risco de cada transação para tomar decisões estratégicas.",
+            "classNameDescription": "font-bold text-xl"
+          },
+          {
+            "iconName": "circleCheck",
+            "description": "Autenticação 3DS 2.0",
+            "text": "Valide a identidade do comprador e aumente sua aprovação de pagamentos, sem comprometer a experiência do cliente.",
+            "classNameDescription": "font-bold text-xl"
+          }
+        ],
+        "buttons": [
+          {
+            "color": "primary",
+            "linkTarget": "_blank",
+            "iconPosition": "left",
+            "uiStyleVariant": "button",
+            "type": "button",
+            "label": "Proteja suas vendas"
+          }
+        ],
+        "image": {
+          "path": "https://assets.decocache.com/odin-experiment/e1781a1e-6659-425d-8946-079c948a0f55/protecao-antifraude.png",
+          "alternativeText": "Ilustração de um website"
+        },
+        "variant": "icon-description-text"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "app-template/sections/SimpleCard.tsx",
+        "reverse": false,
+        "referId": "5",
+        "tag": " ",
+        "title": "Gestão centralizada e transparente",
+        "description": "Tenha total controle sobre suas vendas e recebimentos para tomar decisões mais estratégicas para o seu negócio.",
+        "iconDescriptions": [
+          {
+            "iconName": "check",
+            "description": "Saiba exatamente quando vai receber suas vendas"
+          },
+          {
+            "iconName": "check",
+            "description": "Antecipe seus recebíveis com facilidade"
+          },
+          {
+            "iconName": "check",
+            "description": "Consulte os motivos de recusa das transações e melhore a conversão"
+          },
+          {
+            "iconName": "check",
+            "description": "Extraia relatórios personalizados para facilitar a conciliação"
+          }
+        ],
+        "buttons": [
+          {
+            "color": "primary",
+            "linkTarget": "_blank",
+            "iconPosition": "left",
+            "uiStyleVariant": "button",
+            "type": "button",
+            "label": "Cadastre-se agora"
+          }
+        ],
+        "image": {
+          "path": "https://assets.decocache.com/odin-experiment/a09200d5-6d05-4398-bc13-6b118aa2ad28/gestao.png",
+          "alternativeText": "Imagem de confirmação de parcela quitada"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "app-template/sections/SimpleCard.tsx",
+        "title": "API robusta e customizável",
+        "reverse": true,
+        "referId": "6",
+        "tag": " ",
+        "description": "Precisa de um maior nível de personalização? Utilize nossa API flexível que se adapta às necessidades do seu negócio, garantindo maior eficiência e conversão.",
+        "iconDescriptions": [
+          {
+            "iconName": "transaction",
+            "description": "Multiadquirência",
+            "text": "Conecte-se às principais adquirentes com uma única integração. Mais flexibilidade para negociar taxas.",
+            "classNameDescription": "font-bold text-xl"
+          },
+          {
+            "iconName": "rotate360",
+            "description": "Retentativa online",
+            "text": "Reprocesse pagamentos não autorizados em outras adquirentes, aumentando sua taxa de aprovação.",
+            "classNameDescription": "font-bold text-xl"
+          },
+          {
+            "iconName": "securityShield",
+            "description": "Antifraude customizável",
+            "text": "Integre sua operação ao sistema antifraude da sua escolha.",
+            "classNameDescription": "font-bold text-xl"
+          }
+        ],
+        "buttons": [
+          {
+            "color": "primary",
+            "linkTarget": "_blank",
+            "iconPosition": "left",
+            "uiStyleVariant": "button",
+            "type": "button",
+            "label": "Fale com um especialista"
+          }
+        ],
+        "image": {
+          "path": "https://assets.decocache.com/odin-experiment/3e648d75-6a15-4278-b491-e6b6e13ac71a/automatize.png",
+          "alternativeText": "Ilustração de uma API"
+        },
+        "variant": "icon-description-text"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "app-template/sections/Faq.tsx",
+        "title": "Ficou com dúvidas sobre o Pagar.me?",
+        "text": "Confira nossas perguntas mais frequentes.",
+        "button": [
+          {
+            "color": "primary",
+            "linkTarget": "_blank",
+            "iconPosition": "left",
+            "uiStyleVariant": "button",
+            "type": "button",
+            "label": "Fale com um especialista"
+          }
+        ],
+        "buttonBelow": [
+          {
+            "color": "secondary",
+            "linkTarget": "_blank",
+            "iconName": "arrowUp",
+            "iconPosition": "left",
+            "uiStyleVariant": "button",
+            "type": "button",
+            "label": "Retornar ao topo da página"
+          }
+        ],
+        "questions": [
+          {
+            "ref": null,
+            "question": "O que é uma plataforma de pagamento​?",
+            "answer": "Plataforma de pagamento é a tecnologia que conecta seu negócio aos agentes envolvidos no processamento de uma transação, como adquirentes, bandeiras e emissores de cartão. Assim, você pode receber pagamentos online com segurança e eficiência.",
+            "itemsLength": 9,
+            "currentItemPosition": 1
+          },
+          {
+            "question": "Por que ter uma plataforma de pagamento?",
+            "answer": "Uma plataforma de pagamento como o Pagar.me reúne tudo o que você precisa para vender online, oferecendo tecnologia de processamento de pagamentos, segurança antifraude, checkout otimizado, recorrência, Link de Pagamento, Split de Pagamento e muito mais.",
+            "itemsLength": 9,
+            "currentItemPosition": 2,
+            "ref": null
+          },
+          {
+            "ref": null,
+            "question": "Como funciona o Pagar.me?",
+            "answer": "O Pagar.me é a plataforma de pagamentos digitais da Stone. Oferecemos uma tecnologia robusta e flexível, que garante alta conversão, segurança e estabilidade para negócios de todos os tamanhos e maturidades.",
+            "itemsLength": 9,
+            "currentItemPosition": 3
+          },
+          {
+            "ref": null,
+            "question": "Quais métodos de pagamento posso aceitar com o Pagar.me?",
+            "answer": "O Pagar.me permite aceitar cartão de crédito (à vista e parcelado em até 12x), Pix, boleto e carteiras digitais (Google Pay e Click to Pay da Visa). Com a nossa solução de gateway, ainda é possível vender por voucher online (vale-refeição, vale-alimentação e outros cartões de benefícios) e cartão de débito.",
+            "itemsLength": 9,
+            "currentItemPosition": 4
+          },
+          {
+            "ref": null,
+            "question": "Pagar.me é seguro?",
+            "answer": "Sim! O Pagar.me é uma plataforma de pagamento certificada pelo PCI DSS Nível 1, o mais alto padrão de segurança para pagamentos. Protegemos os dados sensíveis das transações por meio de soluções de criptografia, antifraude integrado, autenticação 3DS 2.0 e tokenização de cartão.",
+            "itemsLength": 9,
+            "currentItemPosition": 5
+          },
+          {
+            "ref": null,
+            "question": "O que preciso para vender com o Pagar.me?",
+            "answer": "Para se cadastrar, é necessário ter um CNPJ ou MEI ativo e um modelo de negócio que seja compatível.",
+            "itemsLength": 9,
+            "currentItemPosition": 6
+          },
+          {
+            "ref": null,
+            "question": "Preciso ter um site para vender com o Pagar.me?",
+            "answer": "Não. Você pode se cadastrar utilizando o link do perfil da sua loja nas redes sociais.",
+            "itemsLength": 8,
+            "currentItemPosition": 7
+          },
+          {
+            "ref": null,
+            "question": "Como faço a integração com o Pagar.me?",
+            "answer": "O Pagar.me tem integração direta com as principais plataformas de e-commerce do mercado. Confira a lista completa de integrações e o passo a passo de cada uma no Hub Pagar.me. Além disso, é possível fazer a implementação via API. Consulte nossa documentação aqui.",
+            "itemsLength": 8,
+            "currentItemPosition": 8
+          }
+        ]
+      }
     }
+  ],
+  "__resolveType": "website/pages/Page.tsx",
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
   }
+}

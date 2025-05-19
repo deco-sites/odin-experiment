@@ -1,0 +1,13 @@
+{
+  "__resolveType": "app-template/sections/SimpleCard.tsx",
+  "iconDescriptions": [
+    {
+      "iconName": "arrowDown",
+      "description": "Agora vai"
+    }
+  ],
+  "buttons": [],
+  "variant": "grid",
+  "icon": {},
+  "reverse": false
+}

@@ -1,0 +1,9 @@
+{
+  "__resolveType": "app-template/sections/Features.tsx",
+  "cards": [
+    {
+      "icon": "accelerator"
+    }
+  ],
+  "iconBorder": true
+}

@@ -1,0 +1,48 @@
+{
+  "name": "My New Page",
+  "path": "/example-path",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "app-template/sections/Header.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "app-template/sections/Hero.tsx",
+        "images": {
+          "web": {
+            "path": "https://assets.decocache.com/odin-experiment/28582f69-6aaf-4dbb-a212-5dd89ae35a9e/green-angels-stone.png"
+          },
+          "mobile": {
+            "path": "https://assets.decocache.com/odin-experiment/28582f69-6aaf-4dbb-a212-5dd89ae35a9e/green-angels-stone.png"
+          }
+        },
+        "buttons": [
+          {
+            "label": "Comece a vender",
+            "color": "primary",
+            "linkTarget": "_blank",
+            "iconName": "accelerator",
+            "iconPosition": "left",
+            "uiStyleVariant": "button"
+          },
+          {
+            "label": "Comece a vender",
+            "color": "primary",
+            "linkTarget": "_blank",
+            "iconName": "accelerator",
+            "iconPosition": "left",
+            "uiStyleVariant": "button"
+          }
+        ]
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
